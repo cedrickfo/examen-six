@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Fiche UX : Site Web</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    a { text-decoration: none; color: inherit; }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                  url("https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=1350&q=80") center/cover no-repeat;
+      color: white;
+      padding: 20px 20px;
+      height: 100px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      animation: fadeInDown 1.5s ease;
+      margin: 0;
+    }
+    nav {
+      margin-top: 8px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 0 8px;
+      padding: 6px 10px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.1);
+      transition: background 0.3s, transform 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255,255,255,0.3);
+      transform: scale(1.05);
+    }
+
+    .dark-toggle {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: #fff;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0px 4px 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 8px 25px rgba(0,0,0,0.2);
+    }
+    .section img.main {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .section img.main:hover {
+      transform: scale(1.05);
+    }
+
+    h2 {
+      color: #d35400;
+      display: flex;
+      align-items: center;
+    }
+    h3 { margin-top: 10px; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      margin-top: 40px;
+    }
+
+    body.dark footer { background: #1e1e1e; color: white; }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 99;
+      border: none;
+      outline: none;
+      background-color: #1a73e8;
+      color: white;
+      cursor: pointer;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+    #topBtn:hover {
+      background-color: #155ab6;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    .learn-more:hover { background: #0056b3; }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Animation pour les petites icônes */
+    ul li img.icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+      vertical-align: middle;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.6s ease;
+    }
+    ul li img.icon.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🎨 Fiche UX : Site Web Moderne</h1>
+  <button class="dark-toggle">🌙</button>
+  <nav>
+    <a href="#timeline">Timeline</a>
+    <a href="#url">URL</a>
+    <a href="#domaines">Domaines</a>
+    <a href="#standards">Standards</a>
+    <a href="#securite">Sécurité</a>
+    <a href="#design">Design/UX</a>
+  </nav>
+</header>
+
+<div class="section" id="timeline">
+  <img class="main" src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=80" alt="Timeline Web">
+  <h2>🕒 Timeline du Web</h2>
+  <ul>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3059/3059997.png">1989 – Naissance du Web</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">1993 – Premier navigateur Mosaic</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/300/300221.png">1998 – Création de Google</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/889/889221.png">2004 – Web 2.0 : réseaux sociaux</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/747/747376.png">2007 – iPhone → Web mobile</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/992/992651.png">2010+ – Cloud, IA</li>
+  </ul>
+  <a href="https://developer.mozilla.org/fr/docs/Learn/Common_questions/Web_mechanics/History_of_the_Web" target="_blank" class="learn-more">En savoir plus 🔗</a>
+</div>
+
+<div class="section" id="url">
+  <img class="main" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="URL Structure">
+  <h2>🌐 URL & Statuts HTTP</h2>
+  <ul>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1006/1006363.png">Schéma : https</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3176/3176369.png">Domaine : www.exemple.com</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">Port : :443</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/4228/4228674.png">Chemin : /dossier/page</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828859.png">Paramètres : ?param=valeur</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/159/159604.png">Ancre : #ancre</li>
+  </ul>
+  <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Status" target="_blank" class="learn-more">En savoir plus 🔗</a>
+</div>
+
+<div class="section" id="domaines">
+  <img class="main" src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1200&q=80" alt="Domaines Web">
+  <h2>🌍 Noms de domaine</h2>
+  <ul>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png">Principe : identifiant (google.com)</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/609/609361.png">Dépôt : via registrars (OVH, GoDaddy)</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/992/992651.png">Cycle de vie : création → expiration</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828885.png">Acteurs : ICANN, registrars, DNS</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/5968/5968885.png">DNS : traduit nom → IP</li>
+  </ul>
+  <a href="https://www.icann.org/" target="_blank" class="learn-more">En savoir plus 🔗</a>
+</div>
+
+<div class="section" id="standards">
+  <img class="main" src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?auto=format&fit=crop&w=1200&q=80" alt="Standards Web">
+  <h2>📏 Standards du Web</h2>
+  <ul>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/732/732212.png">W3C : définit HTML, CSS</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png">Utilité : compatibilité, accessibilité</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png">Exemples : HTML5, CSS3, HTTP/2</li>
+  </ul>
+  <a href="https://www.w3.org/" target="_blank" class="learn-more">En savoir plus 🔗</a>
+</div>
+
+<div class="section" id="securite">
+  <img class="main" src="https://images.unsplash.com/photo-1633265486064-086b219458ec?auto=format&fit=crop&w=1200&q=80" alt="Sécurité Web">
+  <h2>🔒 Sécurité Web 🛡️</h2>
+  <h3>Attaques courantes :</h3>
+  <ul>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/942/942751.png">🎣 Phishing</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828479.png">🐞 Malware</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png">🔑 Brute Force</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/1828/1828812.png">📊 Scraping abusif</li>
+  </ul>
+  <h3>Bonnes pratiques :</h3>
+  <ul>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/2910/2910768.png">🔑 Mots de passe forts + 2FA</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/942/942751.png">🔒 HTTPS (SSL/TLS)</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/992/992651.png">🔄 Mises à jour régulières</li>
+    <li><img class="icon" src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png">💾 Sauvegardes + pare-feu</li>
+  </ul>
+  <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="learn-more">En savoir plus 🔗</a>
+</div>
+
+<footer>
+  ✨ Design/UX Moderne : Responsive, Animations, Infographies, Interactions didactiques
+</footer>
+
+<button id="topBtn" title="Retour en haut">⬆</button>
+
+<script>
+  document.querySelector(".dark-toggle").addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
+
+  const topBtn = document.getElementById("topBtn");
+  window.onscroll = function() { 
+    topBtn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? "block" : "none";
+  };
+  topBtn.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  });
+
+  // Animation apparition icônes
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll("ul li img.icon").forEach(img => {
+    observer.observe(img);
+  });
+</script>
+</body>
+</html>
